@@ -1,0 +1,25 @@
+﻿cmake_minimum_required(VERSION 3.8)
+project(GenericProgrammi
+ngAndTheSTL)
+
+
+set(CMAKE_CXX_STANDARD 11)
+
+#compile Googletest，make dll
+add
+_subdirector
+y(./googlet
+est)
+include_directories(./googletest/include)
+link_directories(./google
+test)
+set(LIBRARIES gtest)
+s
+et(SOURCE_FILES main.cpp Example_ReadAndPrintLines/SimpleReader.
+cpp Example_ReadAndPrintLines/SimpleRead
+er.h normalheader.h Example_ReadAndPrintLines/test/TestRe
+adAndPrintLines.h)
+add_executable(GenericProgrammin
+gAndTheSTL ${SOURCE_FILES})
+target_link_libraries(Ge
+nericProgrammingAndTheSTL ${LIBRARIES})
